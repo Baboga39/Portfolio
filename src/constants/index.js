@@ -271,7 +271,9 @@ const socialImgs = [
   },
   {
     name: "linkedin",
-    imgPath: "https://www.linkedin.com/in/l%C3%AA-tr%C6%B0%C6%A1ng-ng%E1%BB%8Dc-h%E1%BA%A3i-16b61b254/?trk=opento_sprofile_goalscard",
+    imgPath: "/images/linkedin.png",
+    link: "https://www.linkedin.com/in/l%C3%AA-tr%C6%B0%C6%A1ng-ng%E1%BB%8Dc-h%E1%BA%A3i-16b61b254/?trk=opento_sprofile_goalscard",
+
   },
 ];
 
