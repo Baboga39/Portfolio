@@ -13,6 +13,9 @@ const Contact = () => {
     message: "",
   });
 
+  // 👉 Thêm biến current_year
+  const current_year = new Date().getFullYear();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -27,6 +30,18 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      await emailjs.send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID_NEW, // Thay bằng Template ID của email thông báo
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          to_email: "your_email@example.com", // Email của bạn
+        },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
@@ -113,6 +128,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        {/* 👉 Có thể dùng current_year ở đâu đó như ở đây: */}
+        <p className="text-center mt-10 text-sm text-gray-500">
+          &copy; {current_year} All rights reserved.
+        </p>
       </div>
     </section>
   );
