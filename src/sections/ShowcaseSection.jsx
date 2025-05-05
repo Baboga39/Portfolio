@@ -53,7 +53,7 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>
-              Logistics and ERD Projects Implemented for Businesses
+              Logistics and ERP Projects Implemented for Businesses
               </h2>
               <p className="text-white-50 md:text-xl">
               Systems developed to optimize operations and data management, utilizing modern technologies like
